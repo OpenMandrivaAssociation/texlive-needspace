@@ -1,3 +1,9 @@
+# revision 19684
+# category Package
+# catalog-ctan /macros/latex/contrib/needspace
+# catalog-date 2010-09-12 11:26:42 +0200
+# catalog-license lppl
+# catalog-version 1.3c
 Name:		texlive-needspace
 Version:	1.3c
 Release:	1
@@ -44,6 +50,7 @@ command and the bottom of the page, a new page will be started.
 #- source
 %doc %{_texmfdistdir}/source/latex/needspace/needspace.ins
 %doc %{_texmfdistdir}/source/latex/needspace/needspace.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ command and the bottom of the page, a new page will be started.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
