@@ -6,7 +6,7 @@
 # catalog-version 1.3c
 Name:		texlive-needspace
 Version:	1.3c
-Release:	1
+Release:	2
 Summary:	Insert pagebreak if not enough space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/needspace
