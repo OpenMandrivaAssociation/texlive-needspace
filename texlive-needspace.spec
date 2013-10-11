@@ -1,12 +1,12 @@
-# revision 19684
+# revision 29601
 # category Package
 # catalog-ctan /macros/latex/contrib/needspace
-# catalog-date 2010-09-12 11:26:42 +0200
+# catalog-date 2013-04-01 14:35:12 +0200
 # catalog-license lppl
-# catalog-version 1.3c
+# catalog-version 1.3d
 Name:		texlive-needspace
-Version:	1.3c
-Release:	2
+Version:	1.3d
+Release:	1
 Summary:	Insert pagebreak if not enough space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/needspace
@@ -50,17 +50,3 @@ command and the bottom of the page, a new page will be started.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.3c-2
-+ Revision: 754255
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.3c-1
-+ Revision: 719108
-- texlive-needspace
-- texlive-needspace
-- texlive-needspace
-- texlive-needspace
-
