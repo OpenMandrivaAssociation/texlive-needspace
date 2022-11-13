@@ -1,19 +1,13 @@
-# revision 29601
-# category Package
-# catalog-ctan /macros/latex/contrib/needspace
-# catalog-date 2013-04-01 14:35:12 +0200
-# catalog-license lppl
-# catalog-version 1.3d
 Name:		texlive-needspace
-Version:	1.3d
-Release:	10
+Version:	29601
+Release:	1
 Summary:	Insert pagebreak if not enough space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/needspace
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/needspace.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ vertical space. If there is not enough space between the
 command and the bottom of the page, a new page will be started.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,7 +37,8 @@ command and the bottom of the page, a new page will be started.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
