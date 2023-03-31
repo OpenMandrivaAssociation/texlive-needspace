@@ -1,6 +1,6 @@
 Name:		texlive-needspace
 Version:	29601
-Release:	1
+Release:	2
 Summary:	Insert pagebreak if not enough space
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/needspace
